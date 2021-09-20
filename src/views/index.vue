@@ -1,6 +1,12 @@
 <template>
     <div class='text-xl'>
-        <hello-world msg='Bonjour'/>
+        <banner />
+        <section v-for="i in 2" :key='i'>
+            <subject />
+            <div class="grid grid-cols-8 gap-4 m-5 px-4 py-2">
+                <course  v-for="c in 10" :key='`course${c}`' class="" />
+            </div>
+        </section>
     </div>
 </template>
 
